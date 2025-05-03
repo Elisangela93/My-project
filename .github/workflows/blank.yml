@@ -2,9 +2,9 @@ name: Xcode CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
   pull_request:
-    branches: [ "main" ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -24,10 +24,10 @@ jobs:
       run: |
         xcodebuild clean build \
         -scheme O_TEU_ESQUEMA_AQUI \
-        -destination 'platform=iOS Simulator,name=iPhone SE (2nd generation),OS=latest'
+        -destination"platform=iOS Simulator,name=iPhone SE (2nd generation),OS=latest"
 
     - name: Run tests
       run: |
         xcodebuild test \
         -scheme O_TEU_ESQUEMA_AQUI \
-        -destination 'platform=iOS Simulator,name=iPhone SE (2nd generation),OS=latest'
+        -destination"platform=iOS Simulator,name=iPhone SE (2nd generation),OS=latest"
